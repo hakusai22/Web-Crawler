@@ -1,18 +1,43 @@
-# Web-Crawler
-1. 抓取猫眼电影排行(Chapter 3)   
-利用requests库和正则表达式来抓取猫眼电影TOP100的相关内容。  
-2. 抓取今日头条街拍美图(Chapter 6)  
-通过分析Ajax请求来抓取今日头条的街拍美图。  
-3. 爬取淘宝商品(Chapter 7)  
-用Selenium来模拟浏览器操作，抓取淘宝的商品信息。  
-4. 爬取微信公众号文章(Chapter 9)  
-利用代理爬取微信公众号的文章。  
-5. 爬取GitHub(Chapter 10)  
-模拟登录，爬取登录后才可以访问的页面信息。  
-6. 爬取去哪儿网的旅游攻略(Chapter 12)  
-用Pyspider爬取去哪儿网的旅游攻略。  
+# Python3 爬虫学习
 
-图形验证码、滑动验证码、点触验证码、宫格验证码的识别(Chapter 8)  
-代理池的维护(Chapter 9)  
-Cookie池的搭建(Chapter 10)  
-Scrapy对接Selenium(Chapter 13)  
+基于 MySql + Gorm + Gin HTTP服务完成的第三届字节跳动青训营--极简抖音后端项目
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![MIT License][license-shield]][license-url]
+![GitHub top language](https://img.shields.io/github/languages/top/hakusai22/douyin?style=for-the-badge)
+
+<!-- PROJECT LOGO -->
+<br />
+
+
+<p align="center">
+    <a href="https://github.com/hakusai22/douyin/">
+    <img src="https://fastly.jsdelivr.net/gh/hakusai22/image/qq.jpg" alt="Logo" width="200" height="200">
+    </a>
+    <h3 align="center">Python3 爬虫学习</h3>
+  <p align="center">
+    ·
+    <a href="https://github.com/hakusai22/douyin/issues">报告Bug</a>
+    ·
+    <a href="https://github.com/hakusai22/douyin/issues">提出新特性</a>
+  </p>
+
+<!-- links -->
+[your-project-path]:hakusai22/douyin
+[contributors-shield]: https://img.shields.io/github/contributors/hakusai22/douyin.svg?style=for-the-badge
+[contributors-url]: https://github.com/hakusai22/douyin/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/hakusai22/douyin.svg?style=for-the-badge
+[forks-url]: https://github.com/hakusai22/douyin/network/members
+[stars-shield]: https://img.shields.io/github/stars/hakusai22/douyin.svg?style=for-the-badge
+[stars-url]: https://github.com/hakusai22/douyin/stargazers
+[issues-shield]: https://img.shields.io/github/issues/hakusai22/douyin.svg?style=for-the-badge
+[issues-url]: https://img.shields.io/github/issues/hakusai22/douyin.svg
+[license-shield]: https://img.shields.io/github/license/hakusai22/douyin.svg?style=for-the-badge
+[license-url]: https://github.com/hakusai22/douyin/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/xxxx
+
+![img.png](https://fastly.jsdelivr.net/gh/hakusai22/douyin/image/img3.png)
