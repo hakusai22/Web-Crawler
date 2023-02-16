@@ -8,7 +8,7 @@ import time
 def get_one_page(url, offset):
     try:
         headers = {
-            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.1 Safari/605.1.15"
+            'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
         }
         params = {
             'offset': offset
@@ -25,8 +25,9 @@ def parse_one_page(html):
     regex = '<dd>.*?board-index.*?>(.*?)</i>.*?data-src="(.*?)".*?name.*?a.*?>(.*?)</a>.*?star.*?>(.*?)</p>.*?releasetime.*?>(.*?)</p>.*?integer.*?>(.*?)</i>.*?fraction.*?>(.*?)</i>.*?</dd>'
     pattern = re.compile(regex, re.S)
     items = re.findall(pattern, html)
-    
+
     for item in items:
+        print(item)
         yield {
             'index': item[0],
             'image': item[1],
@@ -43,8 +44,9 @@ def write_to_file(content):
 def main(offset):
     url = "http://maoyan.com/board/4"
     html = get_one_page(url, offset)
-    for item in parse_one_page(html):  
-        #print(item)
+    print(html)
+    for item in parse_one_page(html):
+        print(item)
         write_to_file(item)
 
 if __name__ == '__main__':
