@@ -1,4 +1,6 @@
 # 利用Selenium抓取淘宝商品并用pyquery解析得到商品的图片、名称、价格、购买人数、店铺名称和店铺所在地信息，并将其保存到MongoDB。
+
+
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -8,8 +10,8 @@ from urllib.parse import quote
 from pyquery import PyQuery as pq
 from pymongo import MongoClient
 
-KEY_WORD = 'iPad'
-MAX_PAGE = 100
+KEY_WORD = 'Iphone 14 pro'
+MAX_PAGE = 2
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")
@@ -27,19 +29,31 @@ def index_page(page):
         browser.get(url)
 
         if page > 1:
-            input = wait.until(EC.presence_of_element_located(
-                (By.CSS_SELECTOR, "#mainsrp-pager div.form > input")))
-            submit = wait.until(EC.element_to_be_clickable(
-                (By.CSS_SELECTOR, "#mainsrp-pager div.form > span.btn")))
+            input = wait.until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, "#mainsrp-pager div.form > input")
+                )
+            )
+            submit = wait.until(
+                EC.element_to_be_clickable(
+                    (By.CSS_SELECTOR, "#mainsrp-pager div.form > span.btn")
+                )
+            )
             input.clear()
             input.send_keys(page)
             submit.click()
 
-        wait.until(EC.text_to_be_present_in_element(
-            (By.CSS_SELECTOR, "#mainsrp-pager li.active > span"), str(page)))
-        wait.until(EC.presence_of_element_located(
-            (By.CSS_SELECTOR, ".m-itemlist .items .item")))
-        
+        wait.until(
+            EC.text_to_be_present_in_element(
+                (By.CSS_SELECTOR, "#mainsrp-pager li.active > span"), str(page)
+            )
+        )
+        wait.until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, ".m-itemlist .items .item")
+            )
+        )
+
         get_products()
 
     except TimeoutException:
@@ -64,7 +78,8 @@ def get_products():
 
 def save_to_mongo(result):
     try:
-        collection.insert_one(result)
+        print(result)
+        # collection.insert_one(result)
         print("存储到MongoDB成功")
     except Exception:
         print("存储到MongoDB失败")
