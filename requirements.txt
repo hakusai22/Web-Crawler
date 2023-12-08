@@ -1,0 +1,15 @@
+anyio==4.1.0
+certifi==2023.11.17
+cssselect==1.2.0
+fake-useragent==1.4.0
+h11==0.14.0
+httpcore==1.0.2
+httpx==0.25.2
+idna==3.6
+jmespath==1.0.1
+lxml==4.9.3
+packaging==23.2
+parsel==1.8.1
+sniffio==1.3.0
+useragent==0.1.1
+w3lib==2.1.2

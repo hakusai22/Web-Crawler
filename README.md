@@ -40,3 +40,8 @@
 [linkedin-url]: https://linkedin.com/in/xxxx
 
 ![img.png](https://fastly.jsdelivr.net/gh/hakusai22/Web-Crawler/image/img.png)
+
+
+## 包环境安装
+> /Users/yinpeng/PythonWorkSpace/Web-Crawler/venv/bin/pip3.11  freeze > requirements.txt
+> /Users/yinpeng/PythonWorkSpace/Web-Crawler/venv/bin/pip3.11  install -r requirements.txt
