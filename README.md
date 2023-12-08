@@ -43,5 +43,9 @@
 
 
 ## 包环境安装
+
+### 导出所有的python依赖
 > /Users/yinpeng/PythonWorkSpace/Web-Crawler/venv/bin/pip3.11  freeze > requirements.txt
+
+### 使用requirements.txt自动安装所有依赖包
 > /Users/yinpeng/PythonWorkSpace/Web-Crawler/venv/bin/pip3.11  install -r requirements.txt
